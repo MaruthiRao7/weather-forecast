@@ -263,3 +263,16 @@ ul li a:hover{
 .icons ion-icon:hover{
     color: #ff7200;
 }
+
+.copyright {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .copyright a {
+    color: #fff;
+    text-decoration: none;
+  }

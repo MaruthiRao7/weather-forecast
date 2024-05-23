@@ -1,6 +1,11 @@
 ul {
     list-style: none;
   }
+  h1{
+    background-color: #264653;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+  }
   footer {
     font-family: monospace, sans-serif, times;
     font-size: 20px;
@@ -11,14 +16,16 @@ ul {
     text-align: left;
   }
   h1{
-    background-color: aqua;
+    background-color: gray;
   }
   body{
-    background-color: yellow;
+    /* background-color: #0D00FF; */
+    background: url("https://www.google.com/maps/@22.1358579,73.3194792,11z?entry=ttu");
     background-size: cover;
+    color: black;
   }
   .weatherApp {
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMcb0nyFRQpZUvkS8tw0K0qBjpa6a4VrEhEw&usqp=CAU");
+    background-color: #ff7200;
     background-size: cover;
     background-position: 100%;
     width: 100%;
@@ -101,4 +108,15 @@ ul {
     font-weight: 200;
     font-size: 15px;
   }
-  
+  /* .google-map {
+    padding-bottom: 50%;
+    position: relative;
+}
+
+.google-map iframe {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+} */
