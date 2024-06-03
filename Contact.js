@@ -1,20 +1,28 @@
-const buttons = document.querySelectorAll(".card-buttons button");
-const sections = document.querySelectorAll(".card-section");
-const card = document.querySelector(".card");
-
-const handleButtonClick = e => {
-  const targetSection = e.target.getAttribute("data-section");
-  const section = document.querySelector(targetSection);
-  targetSection !== "#about" ?
-  card.classList.add("is-active") :
-  card.classList.remove("is-active");
-  card.setAttribute("data-state", targetSection);
-  sections.forEach(s => s.classList.remove("is-active"));
-  buttons.forEach(b => b.classList.remove("is-active"));
-  e.target.classList.add("is-active");
-  section.classList.add("is-active");
-};
-
-buttons.forEach(btn => {
-  btn.addEventListener("click", handleButtonClick);
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  // Get form values
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var subject = document.getElementById('subject').value;
+  var message = document.getElementById('message').value;
+  
+  // Simple validation (can be expanded)
+  if (name === '' || email === '' || subject === '' || message === '') {
+      showMessage('Please fill in all fields.', 'error');
+      return;
+  }
+  
+  // Show success message
+  showMessage('Thank you for contacting us. We will get back to you soon.', 'success');
+  
+  // Clear form (optional)
+  document.getElementById('contact-form').reset();
 });
+
+function showMessage(message, type) {
+  var formMessage = document.getElementById('form-message');
+  formMessage.textContent = message;
+  formMessage.className = 'form-message ' + type;
+  formMessage.style.display = 'block';
+}
