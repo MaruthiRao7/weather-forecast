@@ -173,5 +173,5 @@ function getTodayDate() {
   let celsiusLink = document.querySelector("#units-celsius");
   celsiusLink.addEventListener("click", displayCelsiusTemperature);
   //sending to default load
-  searchCity("Vancouver");
+  searchCity("Vadodara");
   
